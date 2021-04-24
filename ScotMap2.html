@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="css/leaflet.css"><link rel="stylesheet" href="css/L.Control.Locate.min.css">
+        <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="css/leaflet-control-geocoder.Geocoder.css">
+        <style>
+        #map {
+            width: 1504px;
+            height: 839px;
+        }
+        </style>
+        <title></title>
+    </head>
+    <body>
+        <div id="map">
+        </div>
+        <script src="js/qgis2web_expressions.js"></script>
+        <script src="js/leaflet.js"></script><script src="js/L.Control.Locate.min.js"></script>
+        <script src="js/leaflet.rotatedMarker.js"></script>
+        <script src="js/leaflet.pattern.js"></script>
+        <script src="js/leaflet-hash.js"></script>
+        <script src="js/Autolinker.min.js"></script>
+        <script src="js/rbush.min.js"></script>
+        <script src="js/labelgun.min.js"></script>
+        <script src="js/labels.js"></script>
+        <script src="js/leaflet-control-geocoder.Geocoder.js"></script>
+        
+        
+        <script scr="js/basemaps.js"></script>
+        <script scr="js/mapscript.js"></script>
+        <script>
+
+        var baseLayers = {
+            "Basemap Grey": layer_Positron_54,
+            "Basemap Satellite": layer_GoogleSatellite_55
+            };
+
+        var overLayers = {
+            "Air - PM2.5": pm25_group,
+            "Air - PM10": pm10_group,
+            "Air - NO2": no2_group,
+            "Flood": floods_group,
+            "Noise": noise_group
+            };
+
+//just adding layer controler on map 
+//var allLayers = L.control.layers(, overLayers).addTo(map);
+        var allLayers = L.control.layers(baseLayers, overLayers, {collapsed:false}).addTo(map);
+//layer_Positron_54.addTo(map);
+    bounds_group.addTo(map);
+
+
+</script>
+
+
+        
+    </body>
+</html>
