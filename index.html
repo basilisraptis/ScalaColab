@@ -30,11 +30,8 @@
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
         <script src="js/leaflet-control-geocoder.Geocoder.js"></script>
-        <script>
-
-
         
-
+        <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
         }).fitBounds([[48.27635353973537,-16.259585526678467],[57.71826507150012,12.712445684589365]]);
@@ -44,22 +41,13 @@
         L.control.locate({locateOptions: {maxZoom: 19}}).addTo(map);
         var bounds_group = new L.featureGroup([]);
         function setBounds() {}
-
-
-
-
-
-
+        </script>
 
         <script src="https://github.com/basilisraptis/ScalaColab/blob/3bec36dd2a60c193ba0eff673b046a5e7307128b/vasilisScript/sc_noise.js"></script>
         <script src="https://github.com/basilisraptis/ScalaColab/blob/3bec36dd2a60c193ba0eff673b046a5e7307128b/vasilisScript/sc_no2.js"></script>
         <script src="https://github.com/basilisraptis/ScalaColab/blob/3bec36dd2a60c193ba0eff673b046a5e7307128b/vasilisScript/sc_pm10.js"></script>
         <script src="https://github.com/basilisraptis/ScalaColab/blob/3bec36dd2a60c193ba0eff673b046a5e7307128b/vasilisScript/sc_pm25.js"></script>
-
-
-
-
-
+        <script>
         map.createPane('pane_Positron_54');
         map.getPane('pane_Positron_54').style.zIndex = 454;
         var layer_Positron_54 = L.tileLayer('http://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
