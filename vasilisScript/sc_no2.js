@@ -3,7 +3,7 @@ var no2_group = new L.featureGroup([]);
         map.getPane('pane_sc_no2_4_0').style.zIndex = 406;
         var img_sc_no2_4_0 = 'data/sc_no2_4_0.png';
         var img_bounds_sc_no2_4_0 = [[54.565779777381564,-5.411741364687382],[56.24058002412997,-1.3701539296539977]];
-        var layer_sc_no2_4_0 = new L.imageOverlay.iiif(img_sc_no2_4_0,
+        var layer_sc_no2_4_0 = new L.imageOverlay(img_sc_no2_4_0,
                                             img_bounds_sc_no2_4_0,
                                             {pane: 'pane_sc_no2_4_0'});
         no2_group.addLayer(layer_sc_no2_4_0);
